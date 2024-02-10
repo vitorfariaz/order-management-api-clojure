@@ -1,14 +1,9 @@
 (ns diplomat.http-server
-  (:require [reitit.ring :as ring]
+  (:require [controllers.order :as controllers.order]
+            [reitit.ring :as ring]
             [muuntaja.core :as m]
             [reitit.ring.middleware.muuntaja :as muuntaja])
   (:gen-class))
-
-" * '/' Return string on base URL"
-" * '/users' Return list of users"
-" * '/users/:id Return user for a specific id"
-" * '/users POST a user"
-
 
 (defn base-handler [_]
   {:status 200

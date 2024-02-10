@@ -1,22 +1,21 @@
-# clojure-hospital
+# orderf-management-api-clojure
+A Clojure api, with connection in database Mongo and a http-client.
+This project exemplify the usage of [Diplomat architecture](diplomat-architecture.md) concept. 
 
-A Clojure library designed to ... well, that part is up to you.
 
-## Usage
+## Start the application 
+Download the project
+Run lein deps on root 
+Run lein repl 
+Run the below command on repl window
+```
+(use 'server)
+(start)
+```
+Then the API will be listening at http://localhost:3000 
 
-FIXME
 
-## License
-
-Copyright © 2022 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+## Tech stack 
+- Clojure (programming language)
+- Ring (framework to handle http server abstractions)
+- munntaja (fast HTTP format negotiation, encoding and decoding)

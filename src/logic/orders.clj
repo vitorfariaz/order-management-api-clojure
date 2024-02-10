@@ -16,6 +16,6 @@
   [customer-orders
    create-order :- Delay
    now :- LocalDateTime]
-  (if (some-created-before-20-minutes customer-orders now )
+  (if (some-created-before-20-minutes customer-orders now)
     customer-orders
     @create-order))

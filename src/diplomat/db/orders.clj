@@ -1,15 +1,15 @@
 (ns diplomat.db.orders
   (:import (java.util UUID)))
 
-(def orders (atom {}))
+(def orders (atom []))
 
 (defn get-all-orders []
   @orders)
 
-(defn create-order [user]
+(defn create-order [order]
   (->> (str (UUID/randomUUID))
-       (assoc user :id)
-       (swap! orders assoc)))
+       (assoc order :id)
+       (swap! orders conj)))
 
 (defn get-orders-by-username [username]
   (get @orders username))
